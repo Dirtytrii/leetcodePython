@@ -45,16 +45,16 @@ if __name__ == '__main__':
     # 将机器人位置排序
     a.sort()
     # 左右边界
-    l, r = 0, n
+    L, r = 0, n
     num = -1
 
-    while r >= l:
-        m = (l + r) // 2
+    while r >= L:
+        m = (L + r) // 2
         # 判断机器人每个扫m面积能否完成
         if check(a, m, n, k):
             r = m - 1
             num = m
         else:
-            l = m + 1
+            L = m + 1
 
     print((num - 1) * 2)
